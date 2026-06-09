@@ -11,8 +11,73 @@ body {
     background-repeat: no-repeat;
 }
 
-.header {
-  display: flex; 
-  justify-content: center;
-  align-items: center;
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 0 16px;
+    position: sticky; /* Sprawia, że pasek zostaje na górze podczas przewijania */
+    top: 0;
+    z-index: 100;
+}
+
+/* Wewnętrzny kontener trzymający strukturę w linii i na środku ekranu */
+.navbar-container {
+    max-width: 1128px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px; 
+}
+
+/* Kontener na całe menu Twoich 6 ilustracji */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Pojedynczy klikalny przycisk w menu (ilustracja nad tekstem) */
+.nav-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    text-decoration: none;  
+    color: #666666;         
+    min-width: 110px; /* Zwiększona szerokość, aby zmieścić długie podpisy */      
+    height: 100%;
+    padding: 0 8px; 
+    transition: color 0.2s ease;
+}
+
+/* Efekt po najechaniu myszką na przycisk w menu */
+.nav-item:hover {
+    color: #191919;
+}
+
+/* Parametry dopasowania Twoich 6 ilustracji 128x128 do paska menu */
+.nav-custom-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain; /* Gwarantuje brak zniekształceń */
+    margin-bottom: 4px;  /* Odstęp między ilustracją a tekstem pod nią */
+    display: block;
+}
+
+/* Styl dla Twoich podpisów pod ilustracjami */
+.nav-label {
+    font-size: 11px;        
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.3;       
+    word-wrap: break-word;  /* Bezpieczne łamanie tekstu, jeśli słowo jest bardzo długie */
+}
+
+/* Klasa dodająca pionową linię odcinającą przed ostatnim elementem (Szycie) */
+.nav-item-border {
+    border-left: 1px solid #e0e0e0;
+    padding-left: 12px;
+    margin-left: 8px;
 }
